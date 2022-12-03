@@ -20,7 +20,7 @@ int main() {
     int your_overall_score = 0;
 
     // Open file and ensure it's valid
-    fp = fopen("suggested_moves.txt", "r");
+    fp = fopen("./input_files/suggested_moves.txt", "r");
     if(fp == NULL) {
         printf("invalid file");
         exit(1);

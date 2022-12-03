@@ -17,7 +17,7 @@ int main() {
     int your_overall_score = 0;
 
     // Open file and ensure it's valid
-    fp = fopen("suggested_moves.txt", "r");
+    fp = fopen("./input_files/suggested_moves.txt", "r");
     if(fp == NULL) {
         printf("invalid file");
         exit(1);
@@ -35,7 +35,7 @@ int main() {
         your_overall_score += get_score(other_player_move, result);
     }
  
-    printf("Overall Score: %d\n", your_overall_score);:re
+    printf("Overall Score: %d\n", your_overall_score);
 }
 
 int get_score(char other_player_move, char result)
@@ -77,6 +77,5 @@ int get_score(char other_player_move, char result)
 
     // Your score equals your win/lose/tie + the points for your shape
     your_score += SHAPE_POINTS[your_move - 'A'];
-    printf("%d\n", your_score);
     return your_score;
 }
